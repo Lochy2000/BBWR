@@ -1,0 +1,14 @@
+{
+  "name": "brighton-buccaneers-website",
+  "version": "2.0.0",
+  "description": "Brighton Buccaneers Wheelchair Rugby Club Website",
+  "scripts": {
+    "dev": "python -m http.server 8000",
+    "dev:node": "npx serve .",
+    "build": "echo 'No build process required - static site'",
+    "preview": "npx serve . --single"
+  },
+  "keywords": ["wheelchair-rugby", "brighton", "accessibility", "sports"],
+  "author": "Brighton Buccaneers Development Team",
+  "license": "MIT"
+}

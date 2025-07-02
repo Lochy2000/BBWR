@@ -1,0 +1,85 @@
+# Vercel Configuration
+{
+  "version": 2,
+  "name": "brighton-buccaneers",
+  "builds": [
+    {
+      "src": "*.html",
+      "use": "@vercel/static"
+    },
+    {
+      "src": "css/**",
+      "use": "@vercel/static"
+    },
+    {
+      "src": "js/**",
+      "use": "@vercel/static"
+    },
+    {
+      "src": "assets/**",
+      "use": "@vercel/static"
+    }
+  ],
+  "routes": [
+    {
+      "src": "/",
+      "dest": "/index.html"
+    },
+    {
+      "src": "/home",
+      "dest": "/index.html"
+    },
+    {
+      "src": "/about",
+      "dest": "/aboutus.html"
+    },
+    {
+      "src": "/join",
+      "dest": "/aboutus.html"
+    },
+    {
+      "src": "/competitions",
+      "dest": "/compititions.html"
+    },
+    {
+      "src": "/contact",
+      "dest": "/contact.html"
+    },
+    {
+      "src": "/donate",
+      "dest": "/donate.html"
+    },
+    {
+      "src": "/gallery",
+      "dest": "/gallery.html"
+    }
+  ],
+  "headers": [
+    {
+      "source": "/(.*)",
+      "headers": [
+        {
+          "key": "X-Content-Type-Options",
+          "value": "nosniff"
+        },
+        {
+          "key": "X-Frame-Options",
+          "value": "DENY"
+        },
+        {
+          "key": "X-XSS-Protection",
+          "value": "1; mode=block"
+        }
+      ]
+    },
+    {
+      "source": "/assets/(.*)",
+      "headers": [
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=31536000, immutable"
+        }
+      ]
+    }
+  ]
+}

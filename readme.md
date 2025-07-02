@@ -127,7 +127,7 @@ BrightonBuccaneers/
 
 ### Quick Start
 1. **Clone or Download** the project files
-2. **Open** `home.html` in a web browser
+2. **Open** `index.html` in a web browser
 3. **No build process required** - ready to use immediately
 
 ### Local Development
@@ -142,6 +142,16 @@ npx serve .
 
 # Open browser to localhost:8000
 ```
+
+### 🚀 Deploy to Vercel
+The easiest way to deploy this website:
+
+1. **Push to GitHub** repository
+2. **Connect to Vercel** at [vercel.com](https://vercel.com)
+3. **Import repository** and deploy
+4. **Live site** available instantly with SSL
+
+See [Deployment Guide](docs/DEPLOYMENT.md) for detailed instructions.
 
 ### Dependencies
 All dependencies are loaded via CDN:
@@ -171,6 +181,7 @@ All dependencies are loaded via CDN:
 |----------|-------------|
 | [Features Documentation](docs/FEATURES.md) | Detailed feature specifications and user flows |
 | [Development Guide](docs/DEVELOPMENT.md) | Setup, deployment, and maintenance instructions |
+| [Deployment Guide](docs/DEPLOYMENT.md) | Vercel deployment and domain setup instructions |
 | [Accessibility Guide](docs/ACCESSIBILITY.md) | WCAG compliance and accessibility features |
 | [Changelog](docs/CHANGELOG.md) | Version history and update notes |
 
