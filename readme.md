@@ -6,6 +6,9 @@
 ![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?logo=javascript&logoColor=black)
 ![TailwindCSS](https://img.shields.io/badge/Tailwind_CSS-38B2AC?logo=tailwind-css&logoColor=white)
 
+![image](https://github.com/user-attachments/assets/79b90bed-a502-4605-ac7e-95c8005accec)
+
+
 A modern, responsive website for Brighton Buccaneers Wheelchair Rugby Club, featuring interactive navigation, mobile-optimized content, and engaging character decorations.
 
 ## 📋 Table of Contents
