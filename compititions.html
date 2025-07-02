@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Competitions – Brighton Buccaneers</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="font-sans bg-gray-50">
+    <!-- Top Bar -->
+    <div class="bg-blue-800 text-white py-2 px-4">
+        <div class="container mx-auto flex flex-col md:flex-row justify-between items-center">
+            <div class="flex space-x-4 mb-2 md:mb-0">
+                <a href="tel:07565177023" class="hover:text-blue-200"><i class="fas fa-phone mr-1"></i> 07565177023</a>
+                <a href="mailto:info@bbwrc.co.uk" class="hover:text-blue-200"><i class="fas fa-envelope mr-1"></i> info@bbwrc.co.uk</a>
+            </div>
+            <div class="flex space-x-4">
+                <a href="https://www.facebook.com/brightonbuccaneers/" target="_blank" class="hover:text-blue-200"><i class="fab fa-facebook-f"></i></a>
+                <a href="https://twitter.com/brighton_buccs" target="_blank" class="hover:text-blue-200"><i class="fab fa-twitter"></i></a>
+                <a href="https://www.youtube.com/channel/UCT6ufrPYa1LdnhT6gAnZRYw" target="_blank" class="hover:text-blue-200"><i class="fab fa-youtube"></i></a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="bg-white shadow-md">
+        <div class="container mx-auto px-4">
+            <div class="flex justify-between items-center py-4">
+                <!-- Logo -->
+                <div class="flex items-center">
+                    <a href="home.html" class="flex items-center">
+                        <img src="https://bbwrc.co.uk/wp-content/uploads/2022/03/cropped-image.png" alt="Brighton Buccaneers" class="h-12">
+                    </a>
+                </div>
+
+                <!-- Mobile menu button -->
+                <div class="md:hidden">
+                    <button id="mobile-menu-button" class="text-gray-700 focus:outline-none">
+                        <i class="fas fa-bars text-2xl"></i>
+                    </button>
+                </div>
+
+                <!-- Desktop Menu -->
+                <div class="hidden md:flex space-x-6">
+                    <a href="home.html" class="nav-link text-gray-700 hover:text-blue-600 py-2">Home</a>
+                    
+                    <div class="dropdown relative">
+                        <button class="nav-link text-gray-700 hover:text-blue-600 py-2 flex items-center">
+                            About <i class="fas fa-chevron-down ml-1 text-xs"></i>
+                        </button>
+                        <div class="dropdown-menu absolute hidden bg-white shadow-lg rounded-md mt-2 py-2 w-48 z-10">
+                            <a href="aboutus.html" class="block px-4 py-2 text-gray-700 hover:bg-blue-50">Join us</a>
+                            <a href="gallery.html" class="block px-4 py-2 text-gray-700 hover:bg-blue-50">Gallery</a>
+                            <a href="https://bbwrc.co.uk/about/club-history/" class="block px-4 py-2 text-gray-700 hover:bg-blue-50">Club History</a>
+                        </div>
+                    </div>
+                    
+                    <a href="compititions.html" class="nav-link text-gray-700 hover:text-blue-600 py-2 bg-blue-100 px-3 py-1 rounded">Competitions</a>
+                    <a href="donate.html" class="nav-link text-gray-700 hover:text-blue-600 py-2">Donate</a>
+                    <a href="contact.html" class="nav-link text-gray-700 hover:text-blue-600 py-2">Contact us</a>
+                    <a href="http://bbwrc.co.uk/events" class="nav-link text-gray-700 hover:text-blue-600 py-2">Events</a>
+                    <a href="https://bbwrc.co.uk/?page_id=415" class="nav-link text-gray-700 hover:text-blue-600 py-2">Players Area</a>
+                    <a href="https://bbwrc.co.uk/policies/" class="nav-link text-gray-700 hover:text-blue-600 py-2">Policies</a>
+                </div>
+            </div>
+
+            <!-- Mobile Menu -->
+            <div id="mobile-menu" class="hidden md:hidden bg-white py-2">
+                <a href="home.html" class="block px-4 py-2 text-gray-700 hover:bg-blue-50">Home</a>
+                
+                <div class="px-4 py-2">
+                    <button class="flex items-center justify-between w-full text-gray-700 hover:bg-blue-50">
+                        About <i class="fas fa-chevron-down"></i>
+                    </button>
+                    <div class="pl-4 hidden">
+                        <a href="aboutus.html" class="block py-2 text-gray-700 hover:bg-blue-50">Join us</a>
+                        <a href="gallery.html" class="block py-2 text-gray-700 hover:bg-blue-50">Gallery</a>
+                        <a href="https://bbwrc.co.uk/about/club-history/" class="block py-2 text-gray-700 hover:bg-blue-50">Club History</a>
+                    </div>
+                </div>
+                
+                <a href="compititions.html" class="block px-4 py-2 text-gray-700 hover:bg-blue-50 bg-blue-100 rounded">Competitions</a>
+                <a href="donate.html" class="block px-4 py-2 text-gray-700 hover:bg-blue-50">Donate</a>
+                <a href="contact.html" class="block px-4 py-2 text-gray-700 hover:bg-blue-50">Contact us</a>
+                <a href="http://bbwrc.co.uk/events" class="block px-4 py-2 text-gray-700 hover:bg-blue-50">Events</a>
+                <a href="https://bbwrc.co.uk/?page_id=415" class="block px-4 py-2 text-gray-700 hover:bg-blue-50">Players Area</a>
+                <a href="https://bbwrc.co.uk/policies/" class="block px-4 py-2 text-gray-700 hover:bg-blue-50">Policies</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <div class="bg-cover bg-center bg-no-repeat text-white py-16" style="background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('assets/BBWR-hero-card.png');">
+        <div class="container mx-auto px-4 text-center">
+            <h1 class="text-4xl md:text-5xl font-bold mb-4">Competitions</h1>
+            <p class="text-xl md:text-2xl">Stay updated with our latest tournaments and events</p>
+        </div>
+    </div>
+
+    <!-- Main Content -->
+    <main class="container mx-auto px-4 py-12">
+        <div class="bg-white rounded-lg shadow-lg p-8">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold text-gray-800 mb-4 flex items-center justify-center">
+                    Upcoming Events
+                    <img src="assets/wheelchair-rugby-characters/3.png" alt="" class="w-12 h-12 ml-4 hidden md:inline" />
+                </h2>
+                <p class="text-gray-600 max-w-3xl mx-auto">More information will be added here shortly. Check back regularly for updates on our competitions and events.</p>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-8">
+                <!-- Previous Results Card -->
+                <div class="bg-gray-50 rounded-lg p-6 shadow hover:shadow-lg transition">
+                    <div class="text-blue-600 mb-4">
+                        <i class="fas fa-trophy text-4xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-800 mb-2">Previous Results</h3>
+                    <p class="text-gray-600 mb-4">View results from our past competitions and tournaments.</p>
+                    <a href="#" class="text-blue-600 font-medium hover:underline">View Results</a>
+                </div>
+
+                <!-- Current 5s Card -->
+                <div class="bg-gray-50 rounded-lg p-6 shadow hover:shadow-lg transition">
+                    <div class="text-blue-600 mb-4">
+                        <i class="fas fa-users text-4xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-800 mb-2">Current 5s</h3>
+                    <p class="text-gray-600 mb-4">Information about our current 5-a-side competitions and events.</p>
+                    <a href="https://bbwrc.co.uk/events/category/gbwr5/" class="text-blue-600 font-medium hover:underline">View 5s Events</a>
+                </div>
+
+                <!-- Current 4s Card -->
+                <div class="bg-gray-50 rounded-lg p-6 shadow hover:shadow-lg transition">
+                    <div class="text-blue-600 mb-4">
+                        <i class="fas fa-user-friends text-4xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-800 mb-2">Current 4s</h3>
+                    <p class="text-gray-600 mb-4">Details about our current 4-a-side competitions and tournaments.</p>
+                    <a href="https://bbwrc.co.uk/events/category/gbwr4/" class="text-blue-600 font-medium hover:underline">View 4s Events</a>
+                </div>
+            </div>
+
+            <!-- Coming Soon Section -->
+            <div class="mt-16 text-center">
+                <div class="inline-block bg-blue-100 rounded-full p-4 mb-6">
+                    <i class="fas fa-calendar-alt text-blue-600 text-4xl"></i>
+                </div>
+                <h3 class="text-2xl font-bold text-gray-800 mb-4">More Competitions Coming Soon</h3>
+                <p class="text-gray-600 max-w-2xl mx-auto">We're constantly organizing new events and competitions. Sign up for our newsletter to stay informed about upcoming opportunities to compete.</p>
+                <button class="mt-6 bg-blue-600 hover:bg-blue-700 text-white font-medium py-2 px-6 rounded-full transition">
+                    Subscribe to Updates
+                </button>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-12">
+        <div class="container mx-auto px-4">
+            <div class="grid md:grid-cols-4 gap-8">
+                <div>
+                    <h3 class="text-xl font-bold mb-4">Brighton Buccaneers</h3>
+                    <p class="text-gray-400">Wheelchair rugby club based in Brighton, UK. Competitive and inclusive sports for all.</p>
+                </div>
+                <div>
+                    <h3 class="text-xl font-bold mb-4">Quick Links</h3>
+                    <ul class="space-y-2">
+                        <li><a href="https://bbwrc.co.uk/" class="text-gray-400 hover:text-white transition">Home</a></li>
+                        <li><a href="https://bbwrc.co.uk/about/" class="text-gray-400 hover:text-white transition">About Us</a></li>
+                        <li><a href="https://bbwrc.co.uk/competitions/" class="text-gray-400 hover:text-white transition">Competitions</a></li>
+                        <li><a href="https://bbwrc.co.uk/donate/" class="text-gray-400 hover:text-white transition">Donate</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-xl font-bold mb-4">Contact</h3>
+                    <ul class="space-y-2">
+                        <li class="flex items-center">
+                            <i class="fas fa-phone mr-2 text-gray-400"></i>
+                            <a href="tel:07565177023" class="text-gray-400 hover:text-white transition">07565177023</a>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-envelope mr-2 text-gray-400"></i>
+                            <a href="mailto:info@bbwrc.co.uk" class="text-gray-400 hover:text-white transition">info@bbwrc.co.uk</a>
+                        </li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-xl font-bold mb-4">Follow Us</h3>
+                    <div class="flex space-x-4">
+                        <a href="https://www.facebook.com/brightonbuccaneers/" target="_blank" class="text-gray-400 hover:text-white transition">
+                            <i class="fab fa-facebook-f text-2xl"></i>
+                        </a>
+                        <a href="https://twitter.com/brighton_buccs" target="_blank" class="text-gray-400 hover:text-white transition">
+                            <i class="fab fa-twitter text-2xl"></i>
+                        </a>
+                        <a href="https://www.youtube.com/channel/UCT6ufrPYa1LdnhT6gAnZRYw" target="_blank" class="text-gray-400 hover:text-white transition">
+                            <i class="fab fa-youtube text-2xl"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="border-t border-gray-800 mt-8 pt-8 text-center text-gray-400">
+                <p>&copy; 2023 Brighton Buccaneers. All rights reserved.</p>
+                <div class="mt-2">
+                    <a href="#" class="text-gray-400 hover:text-white transition">Terms of Use</a> - 
+                    <a href="#" class="text-gray-400 hover:text-white transition">Privacy Policy</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Cookie Consent Modal -->
+    <div id="cookie-modal" class="fixed bottom-0 left-0 right-0 bg-gray-800 text-white p-4 shadow-lg cookie-modal">
+        <div class="container mx-auto">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <div class="mb-4 md:mb-0 md:mr-4">
+                    <p>We use cookies on our website to give you the most relevant experience. By clicking "Accept All", you consent to the use of ALL cookies.</p>
+                </div>
+                <div class="flex space-x-2">
+                    <button id="cookie-settings-btn" class="bg-gray-700 hover:bg-gray-600 text-white px-4 py-2 rounded transition">
+                        Cookie Settings
+                    </button>
+                    <button id="accept-all-cookies" class="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded transition">
+                        Accept All
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Cookie Settings Modal -->
+    <div id="cookie-settings-modal" class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center p-4 hidden">
+        <div class="bg-white rounded-lg shadow-xl max-w-2xl w-full max-h-screen overflow-y-auto">
+            <div class="p-6">
+                <div class="flex justify-between items-center mb-4">
+                    <h3 class="text-2xl font-bold text-gray-800">Cookie Settings</h3>
+                    <button id="close-cookie-settings" class="text-gray-500 hover:text-gray-700">
+                        <i class="fas fa-times text-xl"></i>
+                    </button>
+                </div>
+                
+                <p class="text-gray-600 mb-6">You can set your preferences for how this website uses cookies below.</p>
+                
+                <div class="mb-6">
+                    <div class="flex items-center justify-between mb-4">
+                        <div>
+                            <h4 class="font-bold text-gray-800">Necessary Cookies</h4>
+                            <p class="text-gray-600 text-sm">These cookies are essential for the website to function properly.</p>
+                        </div>
+                        <label class="relative inline-flex items-center cursor-pointer">
+                            <input type="checkbox" checked disabled class="sr-only peer">
+                            <div class="w-11 h-6 bg-gray-200 peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-blue-600"></div>
+                        </label>
+                    </div>
+                    
+                    <div class="flex items-center justify-between mb-4">
+                        <div>
+                            <h4 class="font-bold text-gray-800">Functional Cookies</h4>
+                            <p class="text-gray-600 text-sm">Help perform certain functionalities like sharing content.</p>
+                        </div>
+                        <label class="relative inline-flex items-center cursor-pointer">
+                            <input type="checkbox" checked class="sr-only peer">
+                            <div class="w-11 h-6 bg-gray-200 peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-blue-600"></div>
+                        </label>
+                    </div>
+                    
+                    <div class="flex items-center justify-between mb-4">
+                        <div>
+                            <h4 class="font-bold text-gray-800">Performance Cookies</h4>
+                            <p class="text-gray-600 text-sm">Help understand how visitors interact with the website.</p>
+                        </div>
+                        <label class="relative inline-flex items-center cursor-pointer">
+                            <input type="checkbox" checked class="sr-only peer">
+                            <div class="w-11 h-6 bg-gray-200 peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-blue-600"></div>
+                        </label>
+                    </div>
+                    
+                    <div class="flex items-center justify-between mb-4">
+                        <div>
+                            <h4 class="font-bold text-gray-800">Analytics Cookies</h4>
+                            <p class="text-gray-600 text-sm">Help provide information on metrics like visitors and bounce rate.</p>
+                        </div>
+                        <label class="relative inline-flex items-center cursor-pointer">
+                            <input type="checkbox" checked class="sr-only peer">
+                            <div class="w-11 h-6 bg-gray-200 peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-blue-600"></div>
+                        </label>
+                    </div>
+                    
+                    <div class="flex items-center justify-between">
+                        <div>
+                            <h4 class="font-bold text-gray-800">Advertisement Cookies</h4>
+                            <p class="text-gray-600 text-sm">Used to provide visitors with relevant ads and campaigns.</p>
+                        </div>
+                        <label class="relative inline-flex items-center cursor-pointer">
+                            <input type="checkbox" checked class="sr-only peer">
+                            <div class="w-11 h-6 bg-gray-200 peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-blue-600"></div>
+                        </label>
+                    </div>
+                </div>
+                
+                <div class="flex justify-between">
+                    <button id="save-cookie-settings" class="bg-blue-600 hover:bg-blue-700 text-white px-6 py-2 rounded transition">
+                        Save & Accept
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Mobile menu toggle
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+        
+        mobileMenuButton.addEventListener('click', () => {
+            mobileMenu.classList.toggle('open');
+        });
+
+        // Cookie consent functionality
+        const cookieModal = document.getElementById('cookie-modal');
+        const cookieSettingsModal = document.getElementById('cookie-settings-modal');
+        const acceptAllCookies = document.getElementById('accept-all-cookies');
+        const cookieSettingsBtn = document.getElementById('cookie-settings-btn');
+        const closeCookieSettings = document.getElementById('close-cookie-settings');
+        const saveCookieSettings = document.getElementById('save-cookie-settings');
+
+        // Check if cookies are already accepted
+        if (!localStorage.getItem('cookiesAccepted')) {
+            cookieModal.classList.remove('hidden');
+        }
+
+        acceptAllCookies.addEventListener('click', () => {
+            localStorage.setItem('cookiesAccepted', 'true');
+            cookieModal.classList.add('hidden');
+        });
+
+        cookieSettingsBtn.addEventListener('click', () => {
+            cookieSettingsModal.classList.remove('hidden');
+        });
+
+        closeCookieSettings.addEventListener('click', () => {
+            cookieSettingsModal.classList.add('hidden');
+        });
+
+        saveCookieSettings.addEventListener('click', () => {
+            localStorage.setItem('cookiesAccepted', 'true');
+            cookieModal.classList.add('hidden');
+            cookieSettingsModal.classList.add('hidden');
+        });
+
+        // Close cookie settings when clicking outside
+        cookieSettingsModal.addEventListener('click', (e) => {
+            if (e.target === cookieSettingsModal) {
+                cookieSettingsModal.classList.add('hidden');
+            }
+        });
+
+        // Mobile menu dropdowns
+        const mobileDropdownButtons = document.querySelectorAll('#mobile-menu button');
+        mobileDropdownButtons.forEach(button => {
+            button.addEventListener('click', () => {
+                const dropdownContent = button.nextElementSibling;
+                dropdownContent.classList.toggle('hidden');
+            });
+        });
+    </script>
+    <script src="js/main.js"></script>
+</body>
+</html>

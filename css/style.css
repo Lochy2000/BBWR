@@ -1,0 +1,684 @@
+/* Brighton Buccaneers - Main Stylesheet */
+
+/* ==========================================================================
+   Base Styles & Layout
+   ========================================================================== */
+
+body {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+}
+
+/* ==========================================================================
+   Hero Section Animations
+   ========================================================================== */
+
+.hero-image {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), 
+                      url('/assets/BBWR-fullscreen/1.png');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    position: relative;
+    overflow: hidden;
+}
+
+.hero-image::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(45deg, rgba(29, 78, 216, 0.1) 0%, rgba(37, 99, 235, 0.1) 100%);
+    animation: heroShimmer 8s ease-in-out infinite;
+    pointer-events: none;
+}
+
+@keyframes heroShimmer {
+    0%, 100% { opacity: 0.3; }
+    50% { opacity: 0.1; }
+}
+
+.hero-logo-bounce {
+    animation: logoBounce 2s ease-out, logoGlow 3s ease-in-out infinite;
+}
+
+@keyframes logoBounce {
+    0% { 
+        transform: translateY(-50px) scale(0.8); 
+        opacity: 0; 
+    }
+    60% { 
+        transform: translateY(10px) scale(1.05); 
+    }
+    100% { 
+        transform: translateY(0) scale(1); 
+        opacity: 1; 
+    }
+}
+
+@keyframes logoGlow {
+    0%, 100% { 
+        filter: drop-shadow(0 0 20px rgba(59, 130, 246, 0.5)); 
+    }
+    50% { 
+        filter: drop-shadow(0 0 30px rgba(59, 130, 246, 0.8)); 
+    }
+}
+
+.hero-title-slide {
+    animation: slideInFromLeft 1.5s ease-out 0.5s both;
+}
+
+@keyframes slideInFromLeft {
+    0% {
+        transform: translateX(-100px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+.hero-subtitle-slide {
+    animation: slideInFromRight 1.5s ease-out 1s both;
+}
+
+@keyframes slideInFromRight {
+    0% {
+        transform: translateX(100px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+.hero-buttons-fade {
+    animation: fadeInUp 1.5s ease-out 1.5s both;
+}
+
+@keyframes fadeInUp {
+    0% {
+        transform: translateY(30px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+/* ==========================================================================
+   Card Hover Animations
+   ========================================================================== */
+
+.sport-card {
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    position: relative;
+    overflow: hidden;
+}
+
+.sport-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(59, 130, 246, 0.2), transparent);
+    transition: left 0.6s;
+}
+
+.sport-card:hover::before {
+    left: 100%;
+}
+
+.sport-card:hover {
+    transform: translateY(-8px) scale(1.02);
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+}
+
+/* ==========================================================================
+   Interactive Elements
+   ========================================================================== */
+
+.pulse-glow {
+    animation: pulseGlow 2s ease-in-out infinite;
+}
+
+@keyframes pulseGlow {
+    0%, 100% {
+        box-shadow: 0 0 20px rgba(59, 130, 246, 0.3);
+    }
+    50% {
+        box-shadow: 0 0 40px rgba(59, 130, 246, 0.6);
+    }
+}
+
+.bounce-gentle {
+    animation: bounceGentle 2s ease-in-out infinite;
+}
+
+@keyframes bounceGentle {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+.wiggle-on-hover:hover {
+    animation: wiggle 0.5s ease-in-out;
+}
+
+@keyframes wiggle {
+    0%, 100% { transform: rotate(0deg); }
+    25% { transform: rotate(-3deg); }
+    75% { transform: rotate(3deg); }
+}
+
+/* ==========================================================================
+   Section Entry Animations
+   ========================================================================== */
+
+.stagger-fade-in {
+    opacity: 0;
+    transform: translateY(30px);
+    animation: staggerFadeIn 0.8s ease-out forwards;
+}
+
+.stagger-fade-in:nth-child(1) { animation-delay: 0.1s; }
+.stagger-fade-in:nth-child(2) { animation-delay: 0.2s; }
+.stagger-fade-in:nth-child(3) { animation-delay: 0.3s; }
+.stagger-fade-in:nth-child(4) { animation-delay: 0.4s; }
+
+@keyframes staggerFadeIn {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.team-spirit-float {
+    animation: teamFloat 4s ease-in-out infinite;
+}
+
+@keyframes teamFloat {
+    0%, 100% {
+        transform: translateY(0px) rotate(0deg);
+    }
+    33% {
+        transform: translateY(-10px) rotate(1deg);
+    }
+    66% {
+        transform: translateY(5px) rotate(-1deg);
+    }
+}
+
+/* ==========================================================================
+   Navigation & Header Styles
+   ========================================================================== */
+
+/* Dropdown Menus */
+.dropdown-menu {
+    display: block;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-10px);
+    transition: all 0.3s ease-out;
+    pointer-events: none;
+}
+
+.dropdown-menu:not(.hidden) {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+    pointer-events: auto;
+}
+
+@keyframes dropdownSlide {
+    0% {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Navigation Links */
+.nav-link {
+    position: relative;
+    transition: all 0.3s ease;
+}
+
+.nav-link:after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: #3b82f6;
+    transition: width 0.3s ease;
+}
+
+.nav-link:hover:after {
+    width: 100%;
+}
+
+.nav-link:hover {
+    transform: translateY(-2px);
+}
+
+/* Active page indicator */
+.nav-active {
+    background-color: #dbeafe;
+    padding: 0.5rem 0.75rem;
+    border-radius: 0.375rem;
+}
+
+/* Mobile Menu */
+.mobile-menu {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease-out;
+}
+
+.mobile-menu.open {
+    max-height: 1000px;
+    transition: max-height 0.5s ease-in;
+}
+
+/* ==========================================================================
+   Button Styles with Sport-Inspired Animations
+   ========================================================================== */
+
+.btn-primary {
+    background-color: #1d4ed8;
+    color: white;
+    padding: 0.75rem 1.5rem;
+    border-radius: 0.5rem;
+    font-weight: 600;
+    text-decoration: none;
+    display: inline-block;
+    transition: all 0.3s ease;
+    border: none;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+}
+
+.btn-primary::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+    transition: left 0.5s;
+}
+
+.btn-primary:hover::before {
+    left: 100%;
+}
+
+.btn-primary:hover {
+    background-color: #1e40af;
+    transform: translateY(-2px) scale(1.05);
+    box-shadow: 0 10px 25px rgba(29, 78, 216, 0.4);
+}
+
+.btn-primary:active {
+    transform: translateY(0) scale(0.98);
+}
+
+.btn-secondary {
+    background-color: white;
+    color: #1d4ed8;
+    padding: 0.75rem 1.5rem;
+    border-radius: 0.5rem;
+    font-weight: 600;
+    text-decoration: none;
+    display: inline-block;
+    transition: all 0.3s ease;
+    border: 2px solid #1d4ed8;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+}
+
+.btn-secondary:hover {
+    background-color: #1d4ed8;
+    color: white;
+    transform: translateY(-2px) scale(1.05);
+    box-shadow: 0 10px 25px rgba(29, 78, 216, 0.3);
+}
+
+.btn-rounded {
+    border-radius: 9999px;
+}
+
+/* ==========================================================================
+   Card & Content Styles
+   ========================================================================== */
+
+.card {
+    background-color: white;
+    border-radius: 0.5rem;
+    box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
+    transition: all 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+}
+
+.donation-card {
+    background-color: white;
+    border-radius: 0.5rem;
+    box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1);
+    padding: 1.5rem;
+    text-align: center;
+    transition: all 0.3s ease;
+}
+
+.donation-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+}
+
+/* ==========================================================================
+   Gallery Styles
+   ========================================================================== */
+
+.gallery-item {
+    transition: transform 0.3s ease;
+    border-radius: 0.5rem;
+    overflow: hidden;
+}
+
+.gallery-item:hover {
+    transform: scale(1.03);
+}
+
+/* ==========================================================================
+   Cookie & Modal Styles
+   ========================================================================== */
+
+.cookie-modal {
+    transition: all 0.3s ease;
+}
+
+.cookie-modal.hidden {
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(20px);
+    pointer-events: none;
+}
+
+.cookie-banner {
+    transition: all 0.3s ease;
+}
+
+.cookie-banner.hidden {
+    transform: translateY(100%);
+    opacity: 0;
+}
+
+/* ==========================================================================
+   Form Styles
+   ========================================================================== */
+
+.form-input {
+    width: 100%;
+    padding: 0.75rem;
+    border: 1px solid #d1d5db;
+    border-radius: 0.375rem;
+    font-size: 1rem;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease, transform 0.2s ease;
+}
+
+.form-input:focus {
+    outline: none;
+    border-color: #3b82f6;
+    box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
+    transform: scale(1.02);
+}
+
+.form-textarea {
+    width: 100%;
+    padding: 0.75rem;
+    border: 1px solid #d1d5db;
+    border-radius: 0.375rem;
+    font-size: 1rem;
+    min-height: 120px;
+    resize: vertical;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.form-textarea:focus {
+    outline: none;
+    border-color: #3b82f6;
+    box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
+}
+
+/* ==========================================================================
+   Mobile Content Collapse Styles
+   ========================================================================== */
+
+.mobile-content {
+    transition: all 0.3s ease-out;
+}
+
+@media (max-width: 768px) {
+    .mobile-collapsible {
+        max-height: 120px;
+        overflow: hidden;
+        position: relative;
+        transition: max-height 0.4s ease-out;
+    }
+    
+    .mobile-collapsible.expanded {
+        max-height: none;
+        overflow: visible;
+    }
+    
+    .mobile-collapsible:not(.expanded)::after {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        height: 60px;
+        background: linear-gradient(transparent, white);
+        pointer-events: none;
+    }
+    
+    .read-more-btn {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.5rem;
+        margin-top: 1rem;
+        color: #3b82f6;
+        font-weight: 600;
+        cursor: pointer;
+        transition: all 0.3s ease;
+        padding: 0.5rem 1rem;
+        border-radius: 0.375rem;
+        border: 1px solid #e5e7eb;
+        background: white;
+        box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    }
+    
+    .read-more-btn:hover {
+        background-color: #f8fafc;
+        border-color: #3b82f6;
+        transform: translateY(-1px);
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+    
+    .read-more-btn i {
+        transition: transform 0.3s ease;
+    }
+    
+    .read-more-btn.expanded i {
+        transform: rotate(180deg);
+    }
+}
+
+@media (min-width: 769px) {
+    .mobile-collapsible {
+        max-height: none !important;
+        overflow: visible !important;
+    }
+    
+    .read-more-btn {
+        display: none !important;
+    }
+}
+
+.text-brand-blue {
+    color: #1e40af;
+}
+
+.bg-brand-blue {
+    background-color: #1e40af;
+}
+
+.text-brand-light-blue {
+    color: #3b82f6;
+}
+
+.bg-brand-light-blue {
+    background-color: #3b82f6;
+}
+
+.shadow-card {
+    box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
+}
+
+.shadow-card-hover {
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+}
+
+/* ==========================================================================
+   Animation Classes
+   ========================================================================== */
+
+.fade-in {
+    animation: fadeIn 0.5s ease-in;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.slide-in-left {
+    animation: slideInLeft 0.5s ease-out;
+}
+
+@keyframes slideInLeft {
+    from { opacity: 0; transform: translateX(-30px); }
+    to { opacity: 1; transform: translateX(0); }
+}
+
+.slide-in-right {
+    animation: slideInRight 0.5s ease-out;
+}
+
+@keyframes slideInRight {
+    from { opacity: 0; transform: translateX(30px); }
+    to { opacity: 1; transform: translateX(0); }
+}
+
+/* ==========================================================================
+   Responsive Design
+   ========================================================================== */
+
+/* Mobile First Approach */
+@media (max-width: 640px) {
+    .hero-image {
+        background-attachment: scroll;
+    }
+    
+    .card {
+        margin-bottom: 1rem;
+    }
+    
+    .hero-logo-bounce {
+        animation-duration: 1.5s;
+    }
+}
+
+/* Tablet */
+@media (min-width: 641px) and (max-width: 1024px) {
+    .hero-image {
+        background-attachment: scroll;
+    }
+}
+
+/* Desktop */
+@media (min-width: 1025px) {
+    .hero-image {
+        background-attachment: fixed;
+    }
+}
+
+/* ==========================================================================
+   Print Styles
+   ========================================================================== */
+
+@media print {
+    .no-print {
+        display: none !important;
+    }
+    
+    body {
+        color: black !important;
+        background: white !important;
+    }
+    
+    a {
+        color: black !important;
+        text-decoration: underline !important;
+    }
+    
+    .hero-logo-bounce,
+    .team-spirit-float,
+    .bounce-gentle {
+        animation: none !important;
+    }
+}
+
+/* ==========================================================================
+   Simple Character Icons
+   ========================================================================== */
+
+/* Simple inline character icons - no animations, just clean presentation */
+.character-icon {
+    display: inline-block;
+    width: 2rem;
+    height: 2rem;
+    margin-left: 0.75rem;
+    opacity: 0.8;
+    transition: opacity 0.3s ease;
+}
+
+.character-icon:hover {
+    opacity: 1;
+}
+
+@media (max-width: 768px) {
+    .character-icon {
+        display: none;
+    }
+}

@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Donate – Brighton Buccaneers</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="font-sans bg-gray-50">
+    <!-- Top Bar -->
+    <div class="bg-blue-800 text-white py-2 px-4">
+        <div class="container mx-auto flex flex-col md:flex-row justify-between items-center">
+            <div class="flex space-x-4 mb-2 md:mb-0">
+                <a href="tel:07565177023" class="hover:text-blue-200"><i class="fas fa-phone mr-1"></i> 07565177023</a>
+                <a href="mailto:info@bbwrc.co.uk" class="hover:text-blue-200"><i class="fas fa-envelope mr-1"></i> info@bbwrc.co.uk</a>
+            </div>
+            <div class="flex space-x-4">
+                <a href="https://www.facebook.com/brightonbuccaneers/" target="_blank" class="hover:text-blue-200"><i class="fab fa-facebook-f"></i></a>
+                <a href="https://twitter.com/brighton_buccs" target="_blank" class="hover:text-blue-200"><i class="fab fa-twitter"></i></a>
+                <a href="https://www.youtube.com/channel/UCT6ufrPYa1LdnhT6gAnZRYw" target="_blank" class="hover:text-blue-200"><i class="fab fa-youtube"></i></a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="bg-white shadow-md">
+        <div class="container mx-auto px-4">
+            <div class="flex justify-between items-center py-4">
+                <!-- Logo -->
+                <div class="flex items-center">
+                    <a href="home.html" class="flex items-center">
+                        <img src="https://bbwrc.co.uk/wp-content/uploads/2022/03/cropped-image.png" alt="Brighton Buccaneers" class="h-12">
+                    </a>
+                </div>
+
+                <!-- Mobile menu button -->
+                <div class="md:hidden">
+                    <button id="mobile-menu-button" class="text-gray-700 focus:outline-none">
+                        <i class="fas fa-bars text-2xl"></i>
+                    </button>
+                </div>
+
+                <!-- Desktop Menu -->
+                <div class="hidden md:flex space-x-6">
+                    <a href="home.html" class="nav-link text-gray-700 hover:text-blue-600 py-2">Home</a>
+                    
+                    <div class="dropdown relative">
+                        <button class="nav-link text-gray-700 hover:text-blue-600 py-2 flex items-center">
+                            About <i class="fas fa-chevron-down ml-1 text-xs"></i>
+                        </button>
+                        <div class="dropdown-menu absolute hidden bg-white shadow-lg rounded-md mt-2 py-2 w-48 z-10">
+                            <a href="aboutus.html" class="block px-4 py-2 text-gray-700 hover:bg-blue-50">Join us</a>
+                            <a href="gallery.html" class="block px-4 py-2 text-gray-700 hover:bg-blue-50">Gallery</a>
+                            <a href="https://bbwrc.co.uk/about/club-history/" class="block px-4 py-2 text-gray-700 hover:bg-blue-50">Club History</a>
+                        </div>
+                    </div>
+                    
+                    <a href="compititions.html" class="nav-link text-gray-700 hover:text-blue-600 py-2">Competitions</a>
+                    <a href="donate.html" class="nav-link text-gray-700 hover:text-blue-600 py-2 bg-blue-100 px-3 py-1 rounded">Donate</a>
+                    <a href="contact.html" class="nav-link text-gray-700 hover:text-blue-600 py-2">Contact us</a>
+                    <a href="http://bbwrc.co.uk/events" class="nav-link text-gray-700 hover:text-blue-600 py-2">Events</a>
+                    <a href="https://bbwrc.co.uk/?page_id=415" class="nav-link text-gray-700 hover:text-blue-600 py-2">Players Area</a>
+                    <a href="https://bbwrc.co.uk/policies/" class="nav-link text-gray-700 hover:text-blue-600 py-2">Policies</a>
+                </div>
+            </div>
+
+            <!-- Mobile Menu -->
+            <div id="mobile-menu" class="hidden md:hidden bg-white py-2">
+                <a href="home.html" class="block px-4 py-2 text-gray-700 hover:bg-blue-50">Home</a>
+                
+                <div class="px-4 py-2">
+                    <button class="flex items-center justify-between w-full text-gray-700 hover:bg-blue-50">
+                        About <i class="fas fa-chevron-down"></i>
+                    </button>
+                    <div class="pl-4 hidden">
+                        <a href="aboutus.html" class="block py-2 text-gray-700 hover:bg-blue-50">Join us</a>
+                        <a href="gallery.html" class="block py-2 text-gray-700 hover:bg-blue-50">Gallery</a>
+                        <a href="https://bbwrc.co.uk/about/club-history/" class="block py-2 text-gray-700 hover:bg-blue-50">Club History</a>
+                    </div>
+                </div>
+                
+                <a href="compititions.html" class="block px-4 py-2 text-gray-700 hover:bg-blue-50">Competitions</a>
+                <a href="donate.html" class="block px-4 py-2 text-gray-700 hover:bg-blue-50 bg-blue-100 rounded">Donate</a>
+                <a href="contact.html" class="block px-4 py-2 text-gray-700 hover:bg-blue-50">Contact us</a>
+                <a href="http://bbwrc.co.uk/events" class="block px-4 py-2 text-gray-700 hover:bg-blue-50">Events</a>
+                <a href="https://bbwrc.co.uk/?page_id=415" class="block px-4 py-2 text-gray-700 hover:bg-blue-50">Players Area</a>
+                <a href="https://bbwrc.co.uk/policies/" class="block px-4 py-2 text-gray-700 hover:bg-blue-50">Policies</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="bg-gradient-to-r from-blue-800 to-blue-600 text-white py-16">
+        <div class="container mx-auto px-4 text-center">
+            <h1 class="text-4xl md:text-5xl font-bold mb-6">Support the Brighton Buccaneers</h1>
+            <p class="text-xl max-w-3xl mx-auto">Your donations help us cover ongoing costs and compete at national levels</p>
+        </div>
+    </section>
+
+    <!-- Main Content -->
+    <main class="container mx-auto px-4 py-12">
+        <div class="max-w-4xl mx-auto">
+            <!-- Donation Section -->
+            <section class="mb-16">
+                <h2 class="text-3xl font-bold text-blue-900 mb-6">Make a Donation</h2>
+                <p class="text-lg text-gray-700 mb-8">
+                    Your generous contributions help us cover hall hire, equipment maintenance, and competition fees to GBWR. 
+                    Every donation, no matter the size, makes a difference in supporting our team.
+                </p>
+                
+                <div class="grid md:grid-cols-3 gap-6 mb-8">
+                    <div class="donation-card bg-white rounded-lg shadow-md p-6 text-center transition duration-300">
+                        <div class="text-blue-900 mb-4">
+                            <i class="fas fa-trophy text-4xl"></i>
+                        </div>
+                        <h3 class="text-xl font-bold mb-2">Competition Support</h3>
+                        <p class="text-gray-600 mb-4">Help cover our national competition fees</p>
+                        <a href="https://www.paypal.com/donate?token=AO6aC97ApZuBHLRd1HpntrAm_yqJOzR23AuHALooyFCCcjMd7497i9bWSmjDQ5Tz4AfE98FVm8duRoag&amount=10" target="_blank" class="bg-blue-700 hover:bg-blue-800 text-white px-6 py-2 rounded-full transition">
+                            Donate £10
+                        </a>
+                    </div>
+                    
+                    <div class="donation-card bg-white rounded-lg shadow-md p-6 text-center transition duration-300">
+                        <div class="text-blue-900 mb-4">
+                            <i class="fas fa-home text-4xl"></i>
+                        </div>
+                        <h3 class="text-xl font-bold mb-2">Hall Hire</h3>
+                        <p class="text-gray-600 mb-4">Support our weekly training venue costs</p>
+                        <a href="https://www.paypal.com/donate?token=AO6aC97ApZuBHLRd1HpntrAm_yqJOzR23AuHALooyFCCcjMd7497i9bWSmjDQ5Tz4AfE98FVm8duRoag&amount=25" target="_blank" class="bg-blue-700 hover:bg-blue-800 text-white px-6 py-2 rounded-full transition">
+                            Donate £25
+                        </a>
+                    </div>
+                    
+                    <div class="donation-card bg-white rounded-lg shadow-md p-6 text-center transition duration-300">
+                        <div class="text-blue-900 mb-4">
+                            <i class="fas fa-cogs text-4xl"></i>
+                        </div>
+                        <h3 class="text-xl font-bold mb-2">Equipment</h3>
+                        <p class="text-gray-600 mb-4">Maintain and upgrade our playing equipment</p>
+                        <a href="https://www.paypal.com/donate?token=AO6aC97ApZuBHLRd1HpntrAm_yqJOzR23AuHALooyFCCcjMd7497i9bWSmjDQ5Tz4AfE98FVm8duRoag&amount=50" target="_blank" class="bg-blue-700 hover:bg-blue-800 text-white px-6 py-2 rounded-full transition">
+                            Donate £50
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="bg-white rounded-lg shadow-md p-8">
+                    <h3 class="text-2xl font-bold text-blue-900 mb-4">Custom Donation Amount</h3>
+                    <p class="text-gray-700 mb-6">Prefer to donate a different amount? Use our secure PayPal donation button:</p>
+                    
+                    <div class="flex flex-col md:flex-row items-center justify-between">
+                        <div class="mb-4 md:mb-0">
+                            <img src="https://www.paypalobjects.com/webstatic/en_US/i/buttons/checkout-logo-medium.png" alt="Check out with PayPal" class="h-12">
+                        </div>
+                        <div class="flex items-center">
+                            <span class="mr-2 font-medium">£</span>
+                            <input type="number" id="customAmount" min="1" step="1" value="20" class="border rounded-l px-4 py-2 w-24">
+                            <button onclick="donateCustomAmount()" class="bg-yellow-400 hover:bg-yellow-500 text-blue-900 px-6 py-2 rounded-r font-medium transition">
+                                Donate Now
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            
+            <!-- Sponsor Section -->
+            <section class="bg-blue-50 rounded-lg p-8">
+                <h2 class="text-3xl font-bold text-blue-900 mb-6">Sponsor Us!</h2>
+                <p class="text-lg text-gray-700 mb-6">
+                    We're always looking for sponsorship opportunities to help fund our activities. Your sponsorship can make a significant impact:
+                </p>
+                
+                <div class="grid md:grid-cols-2 gap-6 mb-8">
+                    <div class="bg-white p-6 rounded-lg shadow-sm">
+                        <h3 class="text-xl font-bold text-blue-900 mb-3">Equipment Sponsorship</h3>
+                        <ul class="space-y-2">
+                            <li class="flex items-start">
+                                <i class="fas fa-check text-green-500 mt-1 mr-2"></i>
+                                <span>Training balls and tyres</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check text-green-500 mt-1 mr-2"></i>
+                                <span>Shot clock for matches</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check text-green-500 mt-1 mr-2"></i>
+                                <span>Score board for home matches</span>
+                            </li>
+                        </ul>
+                    </div>
+                    
+                    <div class="bg-white p-6 rounded-lg shadow-sm">
+                        <h3 class="text-xl font-bold text-blue-900 mb-3">Brand Visibility</h3>
+                        <ul class="space-y-2">
+                            <li class="flex items-start">
+                                <i class="fas fa-check text-green-500 mt-1 mr-2"></i>
+                                <span>Sponsor our competition strip</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check text-green-500 mt-1 mr-2"></i>
+                                <span>Branded training t-shirts</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check text-green-500 mt-1 mr-2"></i>
+                                <span>Publicity materials at events</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="text-center">
+                    <a href="contact.html" class="inline-block bg-blue-700 hover:bg-blue-800 text-white px-8 py-3 rounded-full font-medium transition">
+                        Contact Us About Sponsorship
+                    </a>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white py-12">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div>
+                    <h3 class="text-xl font-bold mb-4">Brighton Buccaneers</h3>
+                    <p class="mb-4">Wheelchair rugby club offering competitive and recreational opportunities for athletes with physical disabilities.</p>
+                    <div class="flex space-x-4">
+                        <a href="https://www.facebook.com/brightonbuccaneers/" target="_blank" class="text-white hover:text-blue-300"><i class="fab fa-facebook-f"></i></a>
+                        <a href="https://twitter.com/brighton_buccs" target="_blank" class="text-white hover:text-blue-300"><i class="fab fa-twitter"></i></a>
+                        <a href="https://www.youtube.com/channel/UCT6ufrPYa1LdnhT6gAnZRYw" target="_blank" class="text-white hover:text-blue-300"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                
+                <div>
+                    <h3 class="text-xl font-bold mb-4">Quick Links</h3>
+                    <ul class="space-y-2">
+                        <li><a href="home.html" class="hover:text-blue-300">Home</a></li>
+                        <li><a href="aboutus.html" class="hover:text-blue-300">About Us</a></li>
+                        <li><a href="compititions.html" class="hover:text-blue-300">Competitions</a></li>
+                        <li><a href="donate.html" class="hover:text-blue-300">Donate</a></li>
+                        <li><a href="contact.html" class="hover:text-blue-300">Contact Us</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h3 class="text-xl font-bold mb-4">Contact</h3>
+                    <ul class="space-y-2">
+                        <li><i class="fas fa-phone mr-2"></i> 07565 177023</li>
+                        <li><i class="fas fa-envelope mr-2"></i> info@bbwrc.co.uk</li>
+                        <li><i class="fas fa-map-marker-alt mr-2"></i> Falmer Sports Centre</li>
+                        <li><i class="fas fa-university mr-2"></i> University of Brighton</li>
+                        <li><i class="fas fa-map-pin mr-2"></i> BN1 9NH</li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h3 class="text-xl font-bold mb-4">Training Times</h3>
+                    <p class="mb-2"><i class="far fa-calendar-alt mr-2"></i> Every Sunday</p>
+                    <p><i class="far fa-clock mr-2"></i> 10:30 - 12:30</p>
+                    <div class="mt-4">
+                        <a href="https://maps.app.goo.gl/k77WrPDf7hkXYERaA" target="_blank" class="inline-block bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded transition duration-300">
+                            <i class="fas fa-map-marker-alt mr-1"></i> View on Map
+                        </a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-700 mt-8 pt-8 text-center text-gray-400">
+                <p>&copy; 2023 Brighton Buccaneers Wheelchair Rugby Club. All rights reserved.</p>
+                <div class="mt-2">
+                    <a href="https://bbwrc.co.uk/#" class="hover:text-blue-300">Terms of Use</a> - 
+                    <a href="https://bbwrc.co.uk/#" class="hover:text-blue-300">Privacy Policy</a>
+                </div>
+                <p class="mt-2 text-sm">DBADesign SEOPress Pro Theme</p>
+            </div>
+        </div>
+    </footer>
+                <div>
+                    <img src="https://bbwrc.co.uk/wp-content/uploads/2022/03/cropped-image.png" alt="Brighton Buccaneers" class="h-16 mb-4">
+                    <p class="text-gray-400">Wheelchair rugby club based in Brighton, competing nationally.</p>
+                </div>
+                
+                <div>
+                    <h3 class="text-lg font-bold mb-4">Quick Links</h3>
+                    <ul class="space-y-2">
+                        <li><a href="home.html" class="text-gray-400 hover:text-white transition">Home</a></li>
+                        <li><a href="aboutus.html" class="text-gray-400 hover:text-white transition">About</a></li>
+                        <li><a href="compititions.html" class="text-gray-400 hover:text-white transition">Competitions</a></li>
+                        <li><a href="donate.html" class="text-gray-400 hover:text-white transition">Donate</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h3 class="text-lg font-bold mb-4">Contact</h3>
+                    <ul class="space-y-2">
+                        <li class="flex items-start">
+                            <i class="fas fa-phone mt-1 mr-2 text-gray-400"></i>
+                            <a href="tel:07565177023" class="text-gray-400 hover:text-white transition">07565177023</a>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-envelope mt-1 mr-2 text-gray-400"></i>
+                            <a href="mailto:info@bbwrc.co.uk" class="text-gray-400 hover:text-white transition">info@bbwrc.co.uk</a>
+                        </li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h3 class="text-lg font-bold mb-4">Follow Us</h3>
+                    <div class="flex space-x-4">
+                        <a href="https://www.facebook.com/brightonbuccaneers/" target="_blank" class="text-gray-400 hover:text-white transition text-xl">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="https://twitter.com/brighton_buccs" target="_blank" class="text-gray-400 hover:text-white transition text-xl">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a href="https://www.youtube.com/channel/UCT6ufrPYa1LdnhT6gAnZRYw" target="_blank" class="text-gray-400 hover:text-white transition text-xl">
+                            <i class="fab fa-youtube"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-800 mt-8 pt-8 flex flex-col md:flex-row justify-between items-center">
+                <p class="text-gray-500 text-sm mb-4 md:mb-0">© 2023 Brighton Buccaneers. All rights reserved.</p>
+                <div class="flex space-x-4">
+                    <a href="#" class="text-gray-500 hover:text-white text-sm transition">Terms of Use</a>
+                    <a href="#" class="text-gray-500 hover:text-white text-sm transition">Privacy Policy</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Cookie Consent Modal -->
+    <div id="cookie-modal" class="cookie-modal fixed bottom-0 left-0 right-0 bg-white shadow-lg rounded-t-lg p-6 mx-4 md:mx-auto md:max-w-2xl z-50">
+        <div class="flex flex-col md:flex-row items-start md:items-center">
+            <div class="flex-1 mb-4 md:mb-0">
+                <h3 class="text-lg font-bold text-gray-800 mb-2">We use cookies</h3>
+                <p class="text-gray-600 text-sm">
+                    We use cookies on our website to give you the most relevant experience by remembering your preferences and repeat visits. 
+                    By clicking "Accept All", you consent to the use of ALL the cookies.
+                </p>
+            </div>
+            <div class="flex space-x-2">
+                <button id="cookie-settings-btn" class="px-4 py-2 border border-gray-300 rounded text-gray-700 hover:bg-gray-100 transition">
+                    Settings
+                </button>
+                <button id="cookie-accept-btn" class="px-4 py-2 bg-blue-700 text-white rounded hover:bg-blue-800 transition">
+                    Accept All
+                </button>
+            </div>
+        </div>
+        
+        <!-- Cookie Settings (hidden by default) -->
+        <div id="cookie-settings" class="hidden mt-6 border-t pt-4">
+            <h4 class="font-bold text-gray-800 mb-3">Privacy Overview</h4>
+            <p class="text-gray-600 text-sm mb-4">
+                This website uses cookies to improve your experience while you navigate through the website. 
+                Out of these, the cookies that are categorized as necessary are stored on your browser as they 
+                are essential for the working of basic functionalities of the website.
+            </p>
+            
+            <div class="space-y-4">
+                <div class="flex items-center justify-between">
+                    <div>
+                        <label class="font-medium text-gray-800">Necessary</label>
+                        <p class="text-gray-600 text-xs">Always Enabled</p>
+                    </div>
+                    <label class="relative inline-flex items-center cursor-pointer">
+                        <input type="checkbox" checked disabled class="sr-only peer">
+                        <div class="w-11 h-6 bg-blue-600 rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-0.5 after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all"></div>
+                    </label>
+                </div>
+                
+                <div class="flex items-center justify-between">
+                    <div>
+                        <label class="font-medium text-gray-800">Functional</label>
+                        <p class="text-gray-600 text-xs">Help perform certain functionalities</p>
+                    </div>
+                    <label class="relative inline-flex items-center cursor-pointer">
+                        <input type="checkbox" checked class="sr-only peer">
+                        <div class="w-11 h-6 bg-gray-200 rounded-full peer peer-focus:ring-4 peer-focus:ring-blue-300 peer-checked:bg-blue-600 peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-0.5 after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all"></div>
+                    </label>
+                </div>
+                
+                <div class="flex items-center justify-between">
+                    <div>
+                        <label class="font-medium text-gray-800">Performance</label>
+                        <p class="text-gray-600 text-xs">Understand key performance indexes</p>
+                    </div>
+                    <label class="relative inline-flex items-center cursor-pointer">
+                        <input type="checkbox" checked class="sr-only peer">
+                        <div class="w-11 h-6 bg-gray-200 rounded-full peer peer-focus:ring-4 peer-focus:ring-blue-300 peer-checked:bg-blue-600 peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-0.5 after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all"></div>
+                    </label>
+                </div>
+                
+                <div class="flex items-center justify-between">
+                    <div>
+                        <label class="font-medium text-gray-800">Analytics</label>
+                        <p class="text-gray-600 text-xs">Understand visitor interactions</p>
+                    </div>
+                    <label class="relative inline-flex items-center cursor-pointer">
+                        <input type="checkbox" checked class="sr-only peer">
+                        <div class="w-11 h-6 bg-gray-200 rounded-full peer peer-focus:ring-4 peer-focus:ring-blue-300 peer-checked:bg-blue-600 peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-0.5 after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all"></div>
+                    </label>
+                </div>
+            </div>
+            
+            <div class="mt-6 flex justify-end">
+                <button id="cookie-save-btn" class="px-4 py-2 bg-blue-700 text-white rounded hover:bg-blue-800 transition">
+                    Save & Accept
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/main.js"></script>
+</body>
+</html>
