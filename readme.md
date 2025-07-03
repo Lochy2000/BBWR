@@ -5,6 +5,10 @@
 ![CSS3](https://img.shields.io/badge/CSS3-1572B6?logo=css3&logoColor=white)
 ![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?logo=javascript&logoColor=black)
 ![TailwindCSS](https://img.shields.io/badge/Tailwind_CSS-38B2AC?logo=tailwind-css&logoColor=white)
+[![Live Demo](https://img.shields.io/badge/Live%20Demo-Visit%20Site-blue?style=for-the-badge&logo=vercel)](https://bbwr-club-website.vercel.app/)
+
+![image](https://github.com/user-attachments/assets/79b90bed-a502-4605-ac7e-95c8005accec)
+
 
 A modern, responsive website for Brighton Buccaneers Wheelchair Rugby Club, featuring interactive navigation, mobile-optimized content, and engaging character decorations.
 
@@ -211,6 +215,6 @@ This project is created for Brighton Buccaneers Wheelchair Rugby Club. All right
 
 ---
 
-**Built with ❤️ for Brighton Buccaneers Wheelchair Rugby Club**
+**Built with & for Brighton Buccaneers Wheelchair Rugby Club**
 
-For questions or support, contact: [info@bbwrc.co.uk](mailto:info@bbwrc.co.uk)
+For questions or support, contact: [lochlann_oht@hotmail.com](mailto:lochlann_oht@hotmail.com)
