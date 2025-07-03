@@ -215,6 +215,6 @@ This project is created for Brighton Buccaneers Wheelchair Rugby Club. All right
 
 ---
 
-**Built with ❤️ for Brighton Buccaneers Wheelchair Rugby Club**
+**Built with & for Brighton Buccaneers Wheelchair Rugby Club**
 
-For questions or support, contact: [info@bbwrc.co.uk](mailto:info@bbwrc.co.uk)
+For questions or support, contact: [lochlann_oht@hotmail.com](mailto:lochlann_oht@hotmail.com)
